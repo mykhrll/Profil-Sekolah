@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Reset dasar */
 body, html {
   margin: 0;
@@ -12,15 +18,14 @@ body, html {
 /* Header dan logo */
 header {
   max-width: 1000px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.95);
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.95);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   position: relative;
 }
-
 header .logo {
   width: 100px;
   height: 100px;
@@ -30,38 +35,43 @@ header .logo {
 }
 
 /* Navigasi sticky */
-nav {
-  position: sticky;
-  top: 0;
-  background: #fff;
-  padding: 10px 0;
-  z-index: 1000;
-}
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
-  gap: 15px;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 nav ul li a {
   text-decoration: none;
-  color: #004080;
+  color: #fff;
   font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.3s;
 }
 nav ul li a:hover {
-  color: #ff6600;
+  background: #ff6600;
+  color: #fff;
+}
+nav ul li a.active {
+  background: #ff6600;
+  color: #fff;
 }
 
 /* Box Model untuk konten utama */
-main, aside, footer {
+header, main, aside, footer {
   max-width: 1000px;
   margin: 20px auto;
-  background: rgba(255,255,255,0.9);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.box {
+  border: 2px solid #004080;   /* warna garis */
+  border-radius: 8px;          /* sudut melengkung */
+  padding: 15px;               /* ruang dalam */
+  margin: 15px 0;              /* jarak antar elemen */
+  background: #f9f9f9;         /* warna latar belakang */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* bayangan lembut */
 }
 
 /* Styling heading */
@@ -105,7 +115,6 @@ section::after {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
 }
-
 .card {
   background: #e6f0ff;
   padding: 20px;
@@ -155,13 +164,54 @@ section::after {
 }
 
 /* Kontak - efek link */
-#kontak a {
-  color: #004080;
-  text-decoration: none;
+.form-kontak {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
 }
-#kontak a:hover {
-  color: #ff6600;
-  text-decoration: underline;
+.form-kontak input, .form-kontak textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-kontak button {
+  padding: 10px;
+  background: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.form-kontak button:hover {
+  background: #ff6600;
+}
+
+/* Sosmed */
+.sosmed {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;   /* rata kiri */
+}
+.sosmed li {
+  margin: 6px 0;     /* jarak antar item */
+}
+.sosmed a {
+  display: inline-block;       /* biar sesuai panjang teks */
+  padding: 8px 15px;           /* kasih ruang */
+  background: #f2f8ff;         /* warna latar */
+  border: 2px solid #004080;   /* border */
+  border-radius: 5px;
+  color: #004080;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.sosmed a:hover {
+  background: #004080;
+  color: #fff;
 }
 
 /* Responsif: Tablet */
@@ -189,4 +239,82 @@ section::after {
   .program-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ===== Box Section ===== */
+.section-box {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== Jurusan Grid Modern ===== */
+.jurusan-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.jurusan-list li a {
+  display: block;
+  background: #f2f8ff;
+  border: 2px solid #004080;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #004080;
+  text-decoration: none;   /* HILANGKAN underline */
+  transition: 0.3s;
+}
+.jurusan-list li a:hover {
+  background: #004080;
+  color: #fff;
+  border-color: #004080;
+}
+
+/* ==== Ekstrakurikuler jadi kartu kecil ==== */
+.ekstra-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+.ekstra-list li {
+  flex: 1 1 150px;
+  background: #fff2e6;
+  border-left: 5px solid #ff6600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.ekstra-list li:hover {
+  background: #ff6600;
+  color: #fff;
+}
+
+/* ==== Prestasi pakai card ==== */
+.prestasi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+.prestasi-list li {
+  background: #f9f9f9;
+  border-left: 5px solid #004080;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.prestasi-list li:hover {
+  background: #004080;
+  color: #fff;
 }
