@@ -6,31 +6,26 @@
   <title>SMK Negeri 2 Bandar Lampung</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
 <header>
     <img src="img/logo.png" alt="Logo SMKN 2 Bandar Lampung" class="logo">
     <h1>SMK Negeri 2 Bandar Lampung</h1>
     <nav>
         <ul>
-            <li><a href="#profil">Profil</a></li>
-            <li><a href="#sejarah">Sejarah</a></li>
-            <li><a href="#visi">Visi & Misi</a></li>
-            <li><a href="#jurusan">Jurusan</a></li>
-            <li><a href="#ekstrakurikuler">Ekstrakurikuler</a></li>
-            <li><a href="#program">Program Unggulan</a></li>
-            <li><a href="#galeri">Galeri</a></li>
-            <li><a href="#prestasi">Prestasi</a></li>
-            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="#beranda" class="active">Beranda</a></li>
+            <li><a href="#profil" class="active">Profil</a></li>
+            <li><a href="#prestasi" class="active">Prestasi</a></li>
+            <li><a href="#kontak" class="active">Kontak</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
     <!-- Profil Sekolah -->
-    <section id="profil" class="flex-box">
+    <section id="profil" class="section-box">
         <article>
-            <h2>Profil Sekolah</h2> 
+            <h2>Profil Sekolah</h2>
             <img src="img/smkn2bdl.jpg" alt="Foto Gedung SMK Negeri 2 Bandar Lampung" class="foto">
             <p>Kami mengucapkan selamat datang di website resmi <strong>SMK Negeri 2 Bandar Lampung</strong>, 
                yang dirancang sebagai media informasi, komunikasi, dan interaksi antara civitas akademika dan masyarakat luas.
@@ -39,7 +34,7 @@
     </section>
 
     <!-- Sejarah Sekolah -->
-    <section id="sejarah">
+    <section id="sejarah" class="section-box">
         <article>
             <h2>Sejarah Singkat</h2>
             <img src="img/sejarah-smkn2.jpg" alt="Dokumentasi sejarah SMKN 2 Bandar Lampung" class="foto">
@@ -54,7 +49,7 @@
     </section>
 
     <!-- Visi & Misi -->
-    <section id="visi">
+    <section id="visi" class="section-box">
         <h2>Visi & Misi</h2>
         <div class="visi-box">
             <h3>Visi</h3>
@@ -72,10 +67,10 @@
     </section>
 
     <!-- Jurusan -->
-    <section id="jurusan">
+    <section id="jurusan" class="section-box">
         <article>
             <h2>Jurusan</h2>
-            <ul>
+            <ul class="jurusan-list">
                 <li><a href="https://smkn2bdl.sch.id/jurusan/mesin" target="_blank">Teknik Geomatika</a></li>
                 <li><a href="https://smkn2bdl.sch.id/jurusan/listrik" target="_blank">Teknik Pengelasan</a></li>
                 <li><a href="https://smkn2bdl.sch.id/jurusan/bangunan" target="_blank">Teknik Pemesinan</a></li>
@@ -93,7 +88,7 @@
     </section>
 
     <!-- Ekstrakurikuler -->
-    <section id="ekstrakurikuler">
+    <section id="ekstrakurikuler" class="section-box">
         <h2>Kegiatan Ekstrakurikuler</h2>
         <ul class="ekstra-list">
             <li>Pramuka</li>
@@ -107,17 +102,17 @@
     </section>
 
     <!-- Prestasi -->
-    <section id="prestasi">
+    <section id="prestasi" class="section-box">
         <h2>Prestasi Sekolah</h2>
-        <ol>
+        <ul class="prestasi-list">
             <li>Juara Harapan 3 LKBB Gelora Pesema III Tingkat SMA/SMK/MA</li>
             <li>JUARA 2 LKS AUTOMOBILE TECHNOLOGY Kota Bandar Lampung Tahun 2025</li>
             <li>JUARA 1 Teknik Sepeda Motor LKS Kota Bandar Lampung Tahun 2025</li>
-        </ol>
+        </ul>
     </section>
 
     <!-- Program Unggulan -->
-    <section id="program">
+    <section id="program" class="section-box">
         <h2>Program Unggulan</h2>
         <div class="program-grid">
             <div class="card">⚙ Teknik Pemesinan</div>
@@ -132,7 +127,7 @@
     </section>
 
 <!-- Galeri Sekolah -->
-<section id="galeri">
+<section id="galeri" class="section-box">
     <h2>Galeri Kegiatan</h2>
     <div class="galeri-grid">
         <img src="img/galeri1.jpeg" alt="Kegiatan 1">
@@ -147,24 +142,38 @@
 </section>
 
 <!-- Bagian Kontak -->
-<aside id="kontak">
+<aside id="kontak" class="section-box">
     <h2>Kontak & Media Sosial</h2>
-    <p>Alamat: Jl. Prof. Dr. Ir. Sumantri Brojonegoro No.1, Gedong Meneng, Kec. Rajabasa, Kota Bandar Lampung</p>
+    <p>Alamat: Jl. Prof. Dr. Ir. Sumantri Brojonegoro No.1, Gedong Meneng, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35141</p>
     <p>Email: <a href="mailto:info@smkn2bdl.sch.id">info@smkn2bdl.sch.id</a></p>
-    <p>Telepon: <a href="tel:+62721123456">(0721) 123456</a></p>
-    <p>Lokasi: <a href="https://goo.gl/maps/xyz" target="_blank">Lihat di Google Maps</a></p>
-    <ul>
+    <p>Telepon: <a href="tel:(0721) 701966">(0721) 701966</a></p>
+    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.346462171854!2d105.2457848!3d-5.364005700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c535b64632bb%3A0x7774722ca7fc4461!2sState%20Vocational%20High%20School%202%20Bandar%20Lampung!5e0!3m2!1sen!2sid!4v1758781279128!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    <ul class="sosmed">
         <li><a href="https://facebook.com/smkn2bdl" target="_blank">Facebook</a></li>
         <li><a href="https://instagram.com/smkn2bdl" target="_blank">Instagram</a></li>
-        <li><a href="https://twitter.com/smkn2bdl" target="_blank">Twitter</a></li>
+        <li><a href="https://x.com/smkn2bdl" target="_blank">X</a></li>
     </ul>
+</aside>
+    
+<aside id="kontak" class="section-box">
+    <form action="#" method="post" class="form-kontak">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="pesan">Pesan:</label>
+    <textarea id="pesan" name="pesan" rows="4" required></textarea>
+    
+    <button type="submit">Kirim</button>
+    </form>
 </aside>
 
 <!-- Footer -->
-<footer>
+<footer class="section-box">
     <p>&copy; 2025 SMK Negeri 2 Bandar Lampung. Semua Hak Dilindungi.</p>
 </footer>
 
 </body>
-
 </html>
